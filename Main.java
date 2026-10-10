@@ -55,11 +55,11 @@ public class Main {
     }
 
     private static void cargarDatosDePrueba(ProductoService service) {
-        service.guardar(new Producto("Jersey Real Madrid 2020", 4500, 30, "Camisetas Europeas"));
-        service.guardar(new Producto("Yerba mate 1kg", 3200, 50, "Camisetas Europeas"));
-        service.guardar(new Producto("Galletitas dulces", 1850, 100, "Camisetas Europeas"));
-        service.guardar(new Producto("Aceite de oliva 500ml", 6700, 20, "Camisetas Europeas"));
-        service.guardar(new Producto("Chocolate amargo 70%", 2900, 15, "Camisetas Europeas"));
-        System.out.println("✔ Se cargaron 5 productos de prueba.\n");
+        service.guardar(new Producto("Jersey Real Madrid 2020", 40000,10, "Camisetas Europeas"));
+        service.guardar(new Producto("Jersey Liverpool 2015", 45000, 10, "Camisetas Europeas"));
+        service.guardar(new Producto("Jersey Barcelona 2017", 45000, 10, "Camisetas Europeas"));
+        service.guardar(new Producto("Jersey Manchester City 2011", 45000, 10, "Camisetas Europeas"));
+        service.guardar(new Producto("Jersey Chelsea 2019", 45000, 10, "Camisetas Europeas"));
+        System.out.println("Se cargaron los productos de prueba.\n");
     }
 }
