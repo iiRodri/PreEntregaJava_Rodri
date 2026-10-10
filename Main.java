@@ -9,8 +9,6 @@ import util.Validador;
 
 public class Main {
     public static void main(String[] args) {
-        // Creamos las dependencias una sola vez y las compartimos
-        // durante toda la ejecución del programa.
         ProductoService service = new ProductoService();
         Scanner sc = new Scanner(System.in);
         MenuProducto menu = new MenuProducto(sc, service);
@@ -18,16 +16,9 @@ public class Main {
 
         int opcion;
 
-        // do-while garantiza que el menú se muestre al menos una
-        // vez. Se repite hasta que el usuario elige la opción 6.
         do {
             menu.mostrarMenu();
-            opcion = Validador.leerEntero(sc, "Elija una opción: ");
-
-            // Cada opción del menú está envuelta en try/catch.
-            // Si una operación lanza una excepción (producto
-            // inexistente, datos inválidos, etc.), el programa NO
-            // se cae: muestra el mensaje y vuelve a mostrar el menú.
+            opcion = Validador.leerEntero(sc, "Elija una opción:  ");
 
             try {
                 switch (opcion) {
@@ -40,11 +31,8 @@ public class Main {
                     default -> System.out.println("Opción inválida. Elija un número del 1 al 6.");
                 }
             } catch (ProductoNoEncontradoException | StockInsuficienteException e) {
-                // capturamos las excepciones personalizadas
                 System.out.println(e.getMessage());
             } catch (IllegalArgumentException e) {
-                // Validador de datos genericos invalidos
-                // (nombre,precio negativo,etc...)
                 System.out.println(e.getMessage());
             }
 

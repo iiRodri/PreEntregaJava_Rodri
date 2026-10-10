@@ -53,7 +53,7 @@ public class MenuProducto {
     // cada metodo corresponde a una opcion del menu
 
     public void agregarProducto() {
-        System.out.println("Ingrese el nuevo producto: ");
+        System.out.println("Ingrese el nuevo producto");
         String nombre = Validador.leerTexto(sc, "Nombre: ");
         double precio = Validador.leerDouble(sc, "Precio: ");
         int stock = Validador.leerEntero(sc, "Stock: ");
